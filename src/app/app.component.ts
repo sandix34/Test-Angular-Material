@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +13,16 @@ export class AppComponent {
 
   ngOnInit() {
     this.form = this.fb.group({
-      input: [''],
+      email: ['', Validators.email],
       checkbox: [''],
       radio: [''],
       slide: ['']
     })
+  }
+
+  public getError(): string {
+    if (this.form.get('email').hasError('email')) {
+      return `l'email n'est pas valide`;
+    }
   }
 }
