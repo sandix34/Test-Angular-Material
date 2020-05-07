@@ -9,6 +9,10 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatButtonModule} from '@angular/material/button';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 const Material = [
   MatFormFieldModule,
@@ -19,7 +23,11 @@ const Material = [
   MatSelectModule,
   MatSliderModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatMenuModule,
+  MatSidenavModule
 ];
 
 @NgModule({

@@ -7,10 +7,13 @@ import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavigationComponent } from './navigation/navigation.component';
+import { NavigationModule } from './navigation/navigation.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    NavigationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
