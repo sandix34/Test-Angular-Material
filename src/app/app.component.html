@@ -26,6 +26,32 @@
       <input type="radio" value="Homme" formControlName="slide"> Homme <br><br>-->
       <mat-slide-toggle formControlName="slide">Slide me!</mat-slide-toggle><br><br>
 
+      <!-- <select formControlName="select">
+        <option value="">Food</option>
+        <option value="pain">Pain</option>
+        <option value="pate">Pate</option>
+        <option value="pizza">Pizza</option>
+      </select><br><br> -->
+      <mat-form-field>
+        <mat-label>Favorite food</mat-label>
+        <mat-select matNativeControl required formControlName="select">
+          <mat-option value="pain">pain</mat-option>
+          <mat-option value="pate">pate</mat-option>
+          <mat-option value="pizza">pizza</mat-option>
+        </mat-select>
+      </mat-form-field><br><br>
+
+      <!-- <input type="range" min="0" max="10" formControlName="range"><br><br> -->
+      <mat-slider min="0" max="10" formControlName="range"></mat-slider><br><br>
+
+      <!-- <input type="date" formControlName="date"><br><br> -->
+      <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field><br><br>
+
       <pre>{{ form.value | json }}</pre>
     </form>
   </div>

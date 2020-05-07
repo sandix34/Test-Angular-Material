@@ -16,7 +16,10 @@ export class AppComponent {
       email: ['', Validators.email],
       checkbox: [''],
       radio: [''],
-      slide: ['']
+      slide: [''],
+      select: [''],
+      range: [''],
+      date: ['']
     })
   }
 
